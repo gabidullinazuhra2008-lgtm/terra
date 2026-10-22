@@ -1,0 +1,868 @@
+/* подключение основного шрифта */@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+/* подключение рукописного шрифта */
+@font-face {
+    font-family: 'GreatVibes';
+    src: url(../fonts/GreatVibes-Regular.ttf);
+}
+
+/* сброс стандартных стилей браузера */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    transition: 0.5s;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    scroll-behavior: smooth;
+}
+
+/* ограничение ширины контента и центрирование */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #F7F6F1;
+}
+
+/* шапка сайта (фиксированная) */
+header {
+    background-color: #F7F6F1;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-block img {
+    cursor: pointer;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    display: flex;
+    gap: 20px;
+    color: #6F1921;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    color: #56514B;
+    transform: scale(1.1);
+}
+
+.icon img:hover {
+    cursor: pointer;
+    content: url('../image/icon2.png');
+}
+
+.icon a {
+    display: inline-block;
+    outline: none;
+    /* Убирает рамку при клике */
+}
+
+/* главный баннер (первый экран) */
+main {
+    background: url(../image/intro.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    padding-top: 85px;
+}
+
+.main-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.main-block h1 {
+    font-family: 'GreatVibes';
+    font-size: 96px;
+    color: #6F1921;
+    font-weight: 300;
+    margin-top: 195px;
+}
+
+.main-block p {
+    font-size: 24px;
+    color: #665742;
+    margin: 21px 0 41px 0;
+    max-width: 644px;
+    text-align: center;
+}
+
+.main-block a {
+    padding: 16px 24px;
+    color: #F7F6F1;
+    font-size: 16px;
+    background-color: #6F1921;
+    border: #6F1921 solid 1px;
+}
+
+.main-block a:hover {
+    color: #6F1921;
+    font-size: 16px;
+    background-color: #F7F6F1;
+    border: #6F1921 solid 1px;
+}
+
+ /* блок 1 о нас  */
+.block1 {
+    position: relative;
+    padding: 228px 0 120px 0;
+}
+
+/* верхнее кружево через псевдоэлемент */
+.block1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 119px;
+    background-image: url(../image/elements\ 1.png);
+    background-repeat: repeat-x;
+    background-position: top center;
+}
+
+/* нижнее кружево через псевдоэлемент */
+.block1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 119px;
+    background-image: url(../image/elements\ 2.png);
+    background-repeat: repeat-x;
+    background-position: bottom center;
+}
+
+/* контейнер для текста внутри первого блока */
+.section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 61px 133px;
+}
+
+.section-text .top {
+    font-family: 'GreatVibes';
+    font-weight: 300;
+    font-size: 48px;
+    color: #6F1921;
+    margin-bottom: 33px;
+}
+
+.decor-line {
+    width: 64px;
+    border-top: 1px solid #6F1921;
+    margin-bottom: 33px;
+}
+
+.section-text .center {
+    max-width: 934px;
+    font-size: 32px;
+    color: #56514B;
+    margin-bottom: 66px;
+}
+
+.section-text .buttom {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #665742;
+}
+
+ /* блок 2 о нас) */
+.block2 {
+    padding: 120px 0;
+}
+
+.block2 h2 {
+    font-size: 32px;
+    font-weight: 400;
+    color: #6F1921;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.block2 .missia {
+    position: relative;
+    height: 117px;
+
+}
+
+/* выравнивание текста в виде "лесенки" */
+.block2 .p1 {
+    position: absolute;
+    right: 144px;
+    top: 0px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #56514B;
+}
+
+.block2 .p2 {
+    position: absolute;
+    left: 391px;
+    top: 48px;
+    font-family: 'GreatVibes';
+    font-size: 48px;
+    color: #6F1921;
+    line-height: 20px;
+}
+
+.block2 .p3 {
+    position: absolute;
+    right: 207px;
+    top: 80px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #56514B;
+}
+
+/* блок с карточками */
+.block-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 121px;
+    padding-bottom: 120px;
+}
+
+/* бардовая карточка */
+.card1 {
+    background-color: #6F1921;
+    color: #F7F6F1;
+    width: 288px;
+    height: 324px;
+    padding: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.card1 h2 {
+    font-size: 32px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #F7F6F1;
+}
+
+.card1 p {
+    font-size: 16px;
+    color: #DFD9CD;
+    width: 266px;
+}
+
+/* карточка с подписью терра */
+.card2 {
+    position: relative;
+    width: 288px;
+    height: 324px;
+}
+
+.card2 p {
+    position: absolute;
+    right: 11px;
+    bottom: 11px;
+    font-family: 'GreatVibes';
+    font-size: 48px;
+    color: #6F1921;
+}
+
+/* карточка с картинкой */
+.card3 {
+    width: 288px;
+    height: 324px;
+}
+
+/* карточка с текстом */
+.card4 {
+    width: 288px;
+    height: 324px;
+    padding: 11px;
+}
+
+.card4 p {
+    font-size: 16px;
+    color: #56514B;
+    width: 266px;
+}
+
+/* блок 3 почему мы */
+.block3 {
+    background-color: #6F1921;
+    color: #F7F6F1;
+    background-image: url(../image/elements3.svg);
+    background-repeat: repeat-x;
+    background-position: top center;
+    padding: 228px 0 120px 0;
+}
+
+.block3 .title {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+}
+
+/* сетка с преимуществами */
+.vectors {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.vector {
+    flex: 1; /* все колонки одинаковой ширины */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.vectors h3 {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.vectors img {
+    margin-bottom: 50px;
+}
+
+.vectors p {
+    font-size: 16px;
+    color: #DFD9CD;
+    max-width: 258px;
+    text-align: center;
+}
+
+/* декаративная линия между карточками */
+.line {
+    width: 1px;
+    height: 231px;
+    background-color: #F7F6F1;
+}
+
+/* блок программа */
+.program-section {
+    padding: 120px 0 101px 0;
+}
+
+/* заголовок */
+.program-title h2 {
+    font-size: 48px;
+    color: #56514B;
+    margin-bottom: 48px;
+    line-height: 80px;
+    font-weight: 300;
+}
+
+.program-title .GreatVibes {
+    font-family: 'GreatVibes';
+    font-size: 96px;
+    color: #6F1921;
+}
+
+.program-title p {
+    max-width: 1143px;
+    font-size: 24px;
+    color: #56514B;
+}
+
+/* карточки программы */
+.program-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 37px;
+    margin-top: 79px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* сдвиг 2 и 4 карточки вниз  */
+
+#nomber-2 {
+    margin-top: 108px;
+}
+
+#nomber-4 {
+    margin-top: 61px;
+}
+
+.card-image {
+    position: relative;
+}
+
+/* скругления для разных карточек */
+#one {
+    border-radius: 135px 135px 0 0;
+}
+
+#two {
+    border-radius: 0 0 135px 135px;
+}
+#three {
+    border-radius: 135px 135px 0 0;
+}
+
+#four {
+    border-radius: 0 0 135px 135px;
+}
+
+.program-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(111, 25, 33, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    z-index: 1;
+    padding: 10px;
+}
+
+.card-image:hover .program-hover {
+    opacity: 1;
+}
+
+.program-hover p {
+    color: #F7F6F1;
+    font-size: 20px;
+}
+
+ /* отступ для блока с номером */
+.program-info {
+    margin-top: 8px;
+}
+
+.program-num {
+    font-size: 24px;
+    color: #6F1921;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.program-name {
+    font-size: 20px;
+    color: #56514B;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+/* блок с текстом внизу */
+.program-footer {
+    text-align: right;
+    font-size: 20px;
+    color: #56514B;
+    margin-top: 41px;
+}
+
+.program-footer .italic {
+    font-family: 'GreatVibes';
+    font-size: 32px;
+    color: #6F1921;
+    line-height: 30px;
+}
+
+/* блок для бизнеса */
+.business-section {
+    background-color: #6F1921;
+    background-image: url(../image/elements3.svg);
+    background-repeat: repeat-x;
+    background-position: top center;
+    padding: 224px 0 180px 0;
+}
+
+.business {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* картинки слева */
+.business-image {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+/* маленькие картинки слева */
+.small-img {
+    position: absolute;
+    left: 0;
+    top: 410px;
+    z-index: 3;
+}
+
+.small-img.img-2 {
+    left: 141px;
+}
+
+/*  надпись терра*/
+.business-logo {
+    position: absolute;
+    bottom: -55px;
+    left: 0px;
+    font-family: 'GreatVibes';
+    font-size: 150px;
+    color: #F7F6F170;
+    z-index: 4;
+}
+
+/* текст справа */
+.business-content {
+    width: 700px;
+    position: relative;
+    z-index: 2;
+
+}
+
+.business-title {
+    font-family: 'GreatVibes';
+    font-size: 64px;
+    font-weight: 200;
+    color: #F7F6F1;
+    text-align: left;
+    position: relative;
+    top: 154px;
+    z-index: 3;
+}
+
+.business-text {
+    width: 750px;
+    color: #F7F6F1;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: right;
+    padding-top: 165px;
+}
+
+.business-text .p2 {
+    padding-top: 25px;
+}
+
+
+.business-text .p2 a {
+    color: #F7F6F1;
+    text-decoration: underline;
+}
+
+.business-text .p2 a:hover {
+    color: #DFD9CD;
+    opacity: 0.8;
+}
+
+/* галерея */
+.gallery-section {
+    background: url(../image/intro2.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+    padding: 120px 0;
+
+}
+
+.gallery-label {
+    font-size: 32px;
+    font-weight: 500;
+    color: #6F1921;
+    text-transform: uppercase;
+    margin-bottom: 85px;
+}
+
+/* огромные надписи терра */
+.gallery-text {
+    position: absolute;
+    font-family: 'GreatVibes';
+    font-size: 200px;
+    color: #6F1921;
+    z-index: 4;
+}
+
+.text-top {
+    top: 90px;
+    right: 0;
+}
+
+.text-bottom {
+    bottom: -10px;
+    left: 300px;
+}
+
+/* лента с картинками, выходящая за края */
+.gallery-img {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-left: -600px;
+}
+
+.gallery-img {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-left: -600px;
+}
+
+
+/* блок забронируйте место */
+.booking-section {
+    background: url(../image/intro3.png) no-repeat center;
+    background-size: cover;
+    padding: 229px 0 171px 0;
+}
+
+/* белый квадратик на фоне где находится вся информация */
+.booking {
+    background-color: #F7F6F1;
+    display: flex;
+    gap: 100px;
+    padding: 50px 43px 80px 43px;
+}
+
+/* левая часть с формой */
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+
+.booking-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #6F1921;
+    text-transform: uppercase;
+}
+
+.booking-form p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #56514B;
+}
+
+/* поля ввода */
+.booking-form input[type="text"],
+.booking-form input[type="tel"] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #56514B;
+    padding: 7px 0;
+    font-size: 24px;
+    color: #56514B70;
+    margin-bottom: 40px;
+    outline: none;
+    /* убирает стандартную рамку при клике */
+}
+
+.booking-form input::placeholder {
+    color: #56514B70;
+}
+
+/* радио кнопки */
+.radio-title {
+    font-size: 20px;
+    color: #56514B;
+    margin-bottom: 20px;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: 44px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #56514B;
+    font-size: 16px;
+}
+
+/* Убираем стандартный вид радиокнопки */
+.radio-group input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #56514B;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"]:checked {
+    border: 3px solid #6F1921; /*закрашиваем при выборе  */
+}
+
+.booking-btn {
+    background-color: #6F1921;
+    color: #F7F6F1;
+    border: none;
+    padding: 16px 40px;
+    font-size: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.booking-btn:hover {
+    background-color: #56514B;
+    color: #DFD9CD;
+}
+
+
+/* чекбокс согласия */
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    font-size: 14px;
+    color: #8B837E;
+    cursor: pointer;
+}
+
+.checkbox-label a {
+    color: #8B837E;
+    text-decoration: underline;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-top: 2px;
+}
+
+/* фото */
+.booking-info {
+    width: 379px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* контакты под фото */
+.booking-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-top: 22px;
+}
+
+.booking-contacts a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #56514B;
+    font-size: 16px;
+}
+
+.booking-contacts a:hover {
+    color: #6F1921;
+}
+
+
+
+/* футер */
+.footer {
+    background-color: #6F1921;
+    color: #F7F6F1;
+    padding: 80px 0 55px 0;
+}
+
+.footer-container {
+    display: flex;
+    gap: 101px;
+
+}
+
+/* заголовки колонок */
+.footer-col h3 {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 24px;
+    color: #F7F6F1;
+}
+
+/* ссылки */
+.footer-links {
+    display: flex;
+    width: 192px;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-links a {
+    color: #F7F6F1;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer-links a:hover {
+    color: #dfd9cd90;
+}
+
+/* контакты */
+.footer-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-contacts a,
+.contact-address {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #F7F6F1;
+    font-size: 16px;
+    font-weight: 300;
+    width: 259px;
+}
+
+.footer-contacts a:hover {
+    color: #dfd9cd90;
+}
+
+/* линия */
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(247, 246, 241, 0.3);
+    margin-top: 55px;
+}
