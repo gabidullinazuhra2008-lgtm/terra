@@ -72,11 +72,6 @@ header nav a:hover {
     content: url('../image/icon2.png');
 }
 
-.icon a {
-    display: inline-block;
-    outline: none;
-    /* Убирает рамку при клике */
-}
 
 /* главный баннер (первый экран) */
 main {
@@ -591,6 +586,8 @@ main {
     background-size: cover;
     position: relative;
     padding: 120px 0;
+    overflow: hidden;  
+    /* обрезает то, что выходит за края блока */
 
 }
 
@@ -626,7 +623,8 @@ main {
     display: flex;
     align-items: center;
     gap: 32px;
-    margin-left: -600px;
+    margin-left: 0px;
+    max-width: ;
 }
 
 .gallery-img {
